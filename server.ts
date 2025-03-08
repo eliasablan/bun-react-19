@@ -6,7 +6,6 @@ const server = Bun.serve({
   },
   async fetch(req) {
     const path = new URL(req.url).pathname;
-    console.log({ path });
     if (path === "/api/names") {
       return Response.json(["Elias", "Carlos", "Aura"]);
     }
